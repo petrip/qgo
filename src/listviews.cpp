@@ -164,7 +164,7 @@ QVariant PlayerListModel::headerData(int section, Qt::Orientation orientation, i
         case PC_COUNTRY:
             return QVariant("Country");
         case PC_MATCHPREFS:
-            return QVariant("March prefs");
+            return QVariant("Match prefs");
         }
     return QVariant();
 }
