@@ -146,7 +146,7 @@
     <item row="0" column="1">
      <widget class="QStackedWidget" name="stackedWidget">
       <property name="currentIndex">
-       <number>0</number>
+       <number>3</number>
       </property>
       <widget class="ConnectionWidget" name="connectionWidget"/>
       <widget class="QWidget" name="SGFEditor">
@@ -592,21 +592,21 @@
              </property>
             </widget>
            </item>
-           <item row="4" column="1">
+           <item row="5" column="1">
             <widget class="QCheckBox" name="komarkerCB">
              <property name="text">
               <string>Ko marker</string>
              </property>
             </widget>
            </item>
-           <item row="5" column="1">
+           <item row="6" column="1">
             <widget class="QCheckBox" name="numberCurrentMoveCB">
              <property name="text">
               <string>Number Current Move</string>
              </property>
             </widget>
            </item>
-           <item row="6" column="0">
+           <item row="7" column="0">
             <widget class="QLabel" name="TextLabel2">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
@@ -619,7 +619,7 @@
              </property>
             </widget>
            </item>
-           <item row="6" column="1">
+           <item row="7" column="1">
             <widget class="QComboBox" name="timerComboBox">
              <property name="focusPolicy">
               <enum>Qt::TabFocus</enum>
@@ -666,6 +666,13 @@ Delay between the moves in autoplay mode in seconds.</string>
                <string>10</string>
               </property>
              </item>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QCheckBox" name="chatWidgetOffCB">
+             <property name="text">
+              <string>No WBaduk chat widget</string>
+             </property>
             </widget>
            </item>
           </layout>

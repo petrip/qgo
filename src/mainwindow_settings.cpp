@@ -141,14 +141,21 @@ void MainWindow::saveSettings()
 		i=2;
 	settings.setValue("SOUND", i);
 	
-	if ( ui.komarkerCB->isChecked())
+    if ( ui.komarkerCB->isChecked())
 		i=1;
 	else
 		i=0;
 	settings.setValue("KOMARKER", i);
+
+    if ( ui.chatWidgetOffCB->isChecked())
+        i=1;
+    else
+        i=0;
+    settings.setValue("CHATWIDGETOFF", i);
+
 	if ( ui.numberCurrentMoveCB->isChecked())
 		i=1;
-	else
+    else
 		i=0;
 	settings.setValue("NUMBER_CURRENT_MOVE", i);
 #ifdef UNNECESSARY
