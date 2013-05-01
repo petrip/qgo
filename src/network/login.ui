@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>251</width>
-    <height>156</height>
+    <width>270</width>
+    <height>175</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -85,7 +85,7 @@
      </item>
      <item>
       <property name="text">
-       <string>CyberORO</string>
+       <string>WBaduk</string>
       </property>
      </item>
      <item>

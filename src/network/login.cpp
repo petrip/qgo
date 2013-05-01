@@ -178,7 +178,7 @@ ConnectionType LoginDialog::serverStringToConnectionType(const QString & s)
 		return TypeWING;
 	else if(s == "LGS")
 		return TypeLGS;
-	else if(s == "CyberORO")
+    else if(s == "WBaduk")
 		return TypeORO;
 	else if(s == "Tygem")
 		return TypeTYGEM;
