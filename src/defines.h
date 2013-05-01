@@ -126,6 +126,7 @@ struct _preferences
 	bool nmatch_nigiri;
 	QString nmatch_handicap;
 	bool draw_ko_marker;
+    bool use_chat_widget;
 	bool number_current_move;
 	bool terr_stone_mark;
 	bool observe_outside_on_doubleclick;
@@ -160,6 +161,7 @@ struct _preferences
 		nmatch_handicap = settings.value("NMATCH_HANDICAP").toString();
 		
 		draw_ko_marker = (settings.value("KOMARKER") == 1);
+        use_chat_widget = (settings.value("CHATWIDGETOFF") != 1);
 		number_current_move = (settings.value("NUMBER_CURRENT_MOVE") == 1);
 		terr_stone_mark = (settings.value("TERR_STONE_MARK") == 1);
 		observe_outside_on_doubleclick = (settings.value("OBSERVEOUTSIDE") == 1);

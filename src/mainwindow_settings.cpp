@@ -141,14 +141,21 @@ void MainWindow::saveSettings()
 		i=2;
 	settings.setValue("SOUND", i);
 	
-	if ( ui.komarkerCB->isChecked())
+    if ( ui.komarkerCB->isChecked())
 		i=1;
 	else
 		i=0;
 	settings.setValue("KOMARKER", i);
+
+    if ( ui.chatWidgetOffCB->isChecked())
+        i=1;
+    else
+        i=0;
+    settings.setValue("CHATWIDGETOFF", i);
+
 	if ( ui.numberCurrentMoveCB->isChecked())
 		i=1;
-	else
+    else
 		i=0;
 	settings.setValue("NUMBER_CURRENT_MOVE", i);
 #ifdef UNNECESSARY
@@ -253,8 +260,9 @@ void MainWindow::loadSettings()
 	ui.LineEdit_table->setText(settings.value("SKIN_TABLE").toString());
 
 	ui.timerComboBox->setCurrentIndex(settings.value("TIMER_INTERVAL").toInt());
-	ui.komarkerCB->setChecked((settings.value("KOMARKER") == 1));
-	ui.numberCurrentMoveCB->setChecked((settings.value("NUMBER_CURRENT_MOVE") == 1));
+    ui.komarkerCB->setChecked((settings.value("KOMARKER") == 1));
+    ui.chatWidgetOffCB->setChecked((settings.value("CHATWIDGETOFF") == 1));
+    ui.numberCurrentMoveCB->setChecked((settings.value("NUMBER_CURRENT_MOVE") == 1));
 #ifdef UNNECESSARY
 	ui.warnOnCloseEditedCB->setChecked((settings.value("WARNONCLOSEEDITED") == 1));
 	ui.warnOnCloseEngineCB->setChecked((settings.value("WARNONCLOSENGINE") == 1));

@@ -88,7 +88,7 @@ CyberOroConnection::CyberOroConnection(const QString & user, const QString & pas
 	textCodec = QTextCodec::codecForLocale();
 	serverCodec = QTextCodec::codecForLocale();
 	//FIXME check for validity of codecs ??? 
-	ORO_setup_setphrases();
+
 	
 	current_server_index = -1;
 	challenge_response = 0;
@@ -103,8 +103,11 @@ CyberOroConnection::CyberOroConnection(const QString & user, const QString & pas
 	/* We should either create the palette on creation of
 	 * the connection, or have a button to activate it that
 	 * appears when the room is connected */
-	setphrasepalette = new SetPhrasePalette(this);
-	setphrasepalette->show();
+    if(preferences.use_chat_widget){
+        ORO_setup_setphrases();
+        setphrasepalette = new SetPhrasePalette(this);
+        setphrasepalette->show();
+    }
 }
 
 CyberOroConnection::~CyberOroConnection()
